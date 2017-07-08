@@ -10,7 +10,7 @@ namespace Reportes.Areas.Reportes.Controllers
     {
         // GET: Reportes/Main
         public ActionResult Index()
-        {
+        { 
             return View();
         }
     }
