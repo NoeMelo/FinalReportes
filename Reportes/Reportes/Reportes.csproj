@@ -222,6 +222,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Areas\Reportes\Views\web.config" />
+    <Content Include="Areas\Reportes\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Reportes\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Reportes\Views\Main\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -272,8 +275,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Reportes\Models\" />
-    <Folder Include="Areas\Reportes\Views\Main\" />
-    <Folder Include="Areas\Reportes\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
