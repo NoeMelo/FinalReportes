@@ -1,0 +1,38 @@
+﻿@using LibraryDA
+@{
+    ViewBag.Title = "Alumno";
+    List<Alumno> listado = (List<Alumno>)ViewBag.ListadoAlumno;
+}
+
+<h2>Alumno</h2>
+<table class="importa_tabla">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Ciclo</th>
+            <th>Direccion</th>
+            <th>Correo</th>
+            <th>Testimonio</th>
+            <th>ID_usuario</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (Alumno item in listado)
+        {
+            <tr>
+                <td>@item.Nombres</td>
+                <td>@item.Apellidos</td>
+                <td>@item.Ciclo</td>
+                <td>@item.Direccion</td>
+                <td>@item.Correo</td>
+                <td>@item.Testimonio</td>
+                <td>@item.ID_Usuario</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+

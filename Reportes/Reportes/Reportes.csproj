@@ -203,6 +203,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -283,6 +284,11 @@
     <Content Include="Content\cssReportes\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\cssReportes\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\cssReportes\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Reportes\Views\Main\Empresa.cshtml" />
+    <Content Include="Areas\Reportes\Views\Main\Alumno.cshtml" />
+    <Content Include="Areas\Reportes\Views\Main\Invitado.cshtml" />
+    <Content Include="Areas\Reportes\Views\Main\Evento.cshtml" />
+    <Content Include="Areas\Reportes\Views\Main\ArchivoInvestigacion.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -757,6 +763,12 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryDA\LibraryDA.csproj">
+      <Project>{cfcc50ed-d471-4605-a9a7-8cc73f89b0f6}</Project>
+      <Name>LibraryDA</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

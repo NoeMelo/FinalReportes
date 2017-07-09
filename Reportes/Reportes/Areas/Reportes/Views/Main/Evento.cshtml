@@ -1,0 +1,39 @@
+﻿@using LibraryDA
+@{
+    ViewBag.Title = "Evento";
+    List<Evento> listado = (List<Evento>)ViewBag.ListadoEvento;
+}
+
+<h2>Evento</h2>
+<table table class="importa_tabla"  data-show-columns="true" data-pagination="true">
+    <thead>
+        <tr>
+            <th>ID_Evento</th>
+            <th>Titulo</th>
+            <th>Descripción</th>
+            <th>Fecha de publicación</th>
+            <th>Fecha de Inicio</th>
+            <th>Fecha fin</th>
+            <th>Hora</th>
+            <th>Lugar</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (Evento item in listado)
+        {
+            <tr>
+                <td>@item.ID_Evento</td>
+                <th>@item.Titulo</th>
+                <td>@item.Descripcion</td>
+                <td>@item.Fecha_pub</td>
+                <td>@item.Fecha_ini</td>
+                <td>@item.Fecha_fin</td>
+                <td>@item.Hora</td>
+                <td>@item.Lugar</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
