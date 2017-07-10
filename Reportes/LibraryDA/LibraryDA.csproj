@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -52,121 +53,123 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumno.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Archivo_Investigacion.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Clic.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Comentario.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Curso.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="DAalumno.cs" />
     <Compile Include="DAarchivo.cs" />
+    <Compile Include="DAclic.cs" />
+    <Compile Include="DAdet_Partic_Proyecto.cs" />
     <Compile Include="DAempresa.cs" />
     <Compile Include="DAevento.cs" />
     <Compile Include="DAinvitado.cs" />
+    <Compile Include="DAparticipante.cs" />
     <Compile Include="DAproyecto.cs" />
+    <Compile Include="DAusuario.cs" />
     <Compile Include="Descarga_ArchivoI.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Det_Archivo_Inv.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Det_Certificado.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Det_Exp_Laboral.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Det_Form_Acad.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Det_Partic_Proyecto.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Empresa.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Evento.cs">
-      <DependentUpon>General.tt</DependentUpon>
-    </Compile>
-    <Compile Include="General.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>General.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="General.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>General.tt</DependentUpon>
-    </Compile>
-    <Compile Include="General.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>General.edmx</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Historial_Hoja_Vida.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Hoja_Vida.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Invitado.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Noticia.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Participantes.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Profesor.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proyecto.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Proyecto_Constr.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs">
-      <DependentUpon>General.tt</DependentUpon>
+      <DependentUpon>Web.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="General.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>General.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <Compile Include="Web.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Web.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Web.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Web.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Web.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Web.edmx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="General.edmx.diagram">
-      <DependentUpon>General.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="General.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>General.edmx</DependentUpon>
-      <LastGenOutput>General.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="General.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>General.edmx</DependentUpon>
-      <LastGenOutput>General.cs</LastGenOutput>
-    </Content>
+    <EntityDeploy Include="Web.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Web.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Web.edmx.diagram">
+      <DependentUpon>Web.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Web.edmx</DependentUpon>
+      <LastGenOutput>Web.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Web.edmx</DependentUpon>
+      <LastGenOutput>Web.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

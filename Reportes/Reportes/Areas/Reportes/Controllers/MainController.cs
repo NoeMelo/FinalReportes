@@ -23,8 +23,14 @@ namespace Reportes.Areas.Reportes.Controllers
         public ActionResult Alumno()
         {
             //ViewBag.ListadoEspecialidad = DAempresa.ListadoEmpresa();
-            
+
+            //return PartialView(DAalumno.ListadoAlumno());
             ViewBag.ListadoAlumno = DAalumno.ListadoAlumno();
+            ViewBag.ListadoParticipante = DAdet_Partic_Proyecto.ListaDet_participante();
+            ViewBag.ListadoProyecto = DAproyecto.ListadoProyecto();
+            ViewBag.ListadoParticipanteEvento = DAparticipante.ListadoParticipante();
+            ViewBag.ListadoEvento = DAevento.ListadoEvento();
+
             return View();
         }
         public ActionResult Invitado()
@@ -35,11 +41,27 @@ namespace Reportes.Areas.Reportes.Controllers
         public ActionResult Evento()
         {
             ViewBag.ListadoEvento = DAevento.ListadoEvento();
+            ViewBag.ListadoUsuario = DAusuario.ListadoUsuario();
+            ViewBag.ListadoParticipante = DAparticipante.ListadoParticipante();
+
+
             return View();
         }
         public ActionResult ArchivoInvestigacion()
         {
             ViewBag.ListadoArchivoInvestigacion = DAarchivo.ListaArchivo();
+            ViewBag.ListadoProyecto = DAproyecto.ListadoProyecto();
+            return View();
+        }
+        public ActionResult Proyecto()
+        {
+            ViewBag.ListadoProyecto = DAproyecto.ListadoProyecto();
+            return View();
+        }
+
+
+        public ActionResult Modulo() {
+
             return View();
         }
     }

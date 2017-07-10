@@ -2,10 +2,15 @@
 @{
     ViewBag.Title = "Evento";
     List<Evento> listado = (List<Evento>)ViewBag.ListadoEvento;
+    List<Usuario> listadoUsuario = (List<Usuario>)ViewBag.ListadoUsuario;
+    List<Participantes> listadoParticipante = (List<Participantes>)ViewBag.ListadoParticipante;
+
+    int cant_participantes = 0;
+
 }
 
 <h2>Evento</h2>
-<table table class="importa_tabla"  data-show-columns="true" data-pagination="true">
+<table table class="importa_tabla" id="tabla_evento" data-show-columns="true" data-pagination="true">
     <thead>
         <tr>
             <th>ID_Evento</th>
@@ -16,7 +21,7 @@
             <th>Fecha fin</th>
             <th>Hora</th>
             <th>Lugar</th>
-
+            <th>Asistentes</th>
         </tr>
     </thead>
     <tbody>
@@ -32,8 +37,28 @@
                 <td>@item.Fecha_fin</td>
                 <td>@item.Hora</td>
                 <td>@item.Lugar</td>
+           
+                @foreach (Participantes itemCorre2 in listadoParticipante)
+                {
+                    if (@item.ID_Evento == @itemCorre2.ID_Evento)
+                    {
+                        cant_participantes = cant_participantes + 1;
+                    }
+                }
+            
+                <td>@cant_participantes</td>
+
+                @{
+                    cant_participantes = 0;
+                 }
+
             </tr>
-        }
+                    }
+
 
     </tbody>
 </table>
+
+
+
+<a href="" onclick="crear('tabla_evento')"><img src="~/Foto/ico-excel.png" height="50px" width="50px" /> Exportar</a>

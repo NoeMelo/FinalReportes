@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace LibraryDA
 {
-    public class DAproyecto
+    public class DAdet_Partic_Proyecto
     {
-        static public List<Proyecto> ListadoProyecto()
+        static public List<Det_Partic_Proyecto> ListaDet_participante()
         {
-            List<Proyecto> evento = new List<Proyecto>();
+            List<Det_Partic_Proyecto> evento = new List<Det_Partic_Proyecto>();
             using (var data = new WEBEntities())
             {
-                return data.Proyecto.ToList();
+                return data.Det_Partic_Proyecto.ToList();
             }
         }
+
+
+
     }
 }
+

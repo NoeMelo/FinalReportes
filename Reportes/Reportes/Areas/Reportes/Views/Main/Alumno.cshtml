@@ -2,10 +2,30 @@
 @{
     ViewBag.Title = "Alumno";
     List<Alumno> listado = (List<Alumno>)ViewBag.ListadoAlumno;
+
+
+    string imprimir_rol = "";
+    string imprimir_proyecto = "";
+    string imprimir_evento = "";
+
+
+
+    List<Det_Partic_Proyecto> listadoParticipante = (List<Det_Partic_Proyecto>)ViewBag.ListadoParticipante;
+
+    List<Proyecto> listadoProyecto = (List<Proyecto>)ViewBag.ListadoProyecto;
+
+    List<Participantes> listadoParticipanteEvento = (List<Participantes>)ViewBag.ListadoParticipanteEvento;
+
+    List<Evento> listadoEvento = (List<Evento>)ViewBag.ListadoEvento;
+
+
+
+
 }
 
 <h2>Alumno</h2>
-<table class="importa_tabla">
+
+<table class="importa_tabla" id="tabla_alumno">
     <thead>
         <tr>
             <th>Nombre</th>
@@ -15,6 +35,9 @@
             <th>Correo</th>
             <th>Testimonio</th>
             <th>ID_usuario</th>
+            <th>Rol</th>
+            <th>Proyecto</th>
+            <th>Evento</th>
         </tr>
     </thead>
     <tbody>
@@ -29,10 +52,86 @@
                 <td>@item.Correo</td>
                 <td>@item.Testimonio</td>
                 <td>@item.ID_Usuario</td>
+
+
+          
+                
+                @foreach (Det_Partic_Proyecto itemCorre in listadoParticipante)
+                {
+
+
+                    if (@item.ID_Usuario == @itemCorre.ID_Usuario)
+                    {
+
+
+                        imprimir_rol = itemCorre.Rol + ", " + imprimir_rol;
+
+
+                        foreach (Proyecto itemCorre2 in listadoProyecto)
+                        {
+
+                            if (@itemCorre.ID_Proyecto == @itemCorre2.ID_Proyecto)
+                            {
+                                @*<td>@itemCorre2.Titulo</td>*@
+
+                                imprimir_proyecto = itemCorre2.Titulo + ", " + imprimir_proyecto;
+
+                            }
+
+                        }
+
+
+                    }
+                }
+            
+                <td>@imprimir_rol</td>
+                <td>@imprimir_proyecto</td>
+               @* @imprimir_rol.IsEmpty();*@
+               @* @imprimir_rol.Equals("");*@
+                
+                @{imprimir_rol = "";
+                    imprimir_proyecto = "";
+                }
+
+
+                @foreach (Participantes itemCorre3 in listadoParticipanteEvento)
+                {
+                    if (@item.ID_Usuario == @itemCorre3.ID_Usuario)
+                    {
+
+
+                        foreach (Evento itemCorre4 in listadoEvento)
+                        {
+
+                            if (@itemCorre3.ID_Evento == @itemCorre4.ID_Evento)
+                            {
+
+
+                                imprimir_evento = itemCorre4.Titulo + ", " + imprimir_evento;
+
+                                
+
+                            }
+
+                        }
+
+                    }
+                }
+
+                <td>@imprimir_evento</td>
+
+                @{imprimir_evento = "";
+                   
+                }
+
+
             </tr>
         }
+        
 
     </tbody>
 </table>
 
 
+
+<a href="" onclick="crear('tabla_alumno')"><img src="~/Foto/ico-excel.png" height="50px" width="50px" /> Exportar</a>

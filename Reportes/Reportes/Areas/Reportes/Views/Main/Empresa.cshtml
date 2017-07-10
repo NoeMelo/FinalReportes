@@ -1,15 +1,17 @@
 ﻿@using LibraryDA
 @{
     ViewBag.Title = "Empresa";
-
     List<Empresa> listado = (List<Empresa>)ViewBag.ListadoEmpresa;
-
 }
-<table class="importa_tabla"  data-show-columns="true" data-pagination="true">
+<h2>Empresa</h2>
+<table class="importa_tabla" id="tabla_empresa"  data-show-columns="true" data-pagination="true">
     <thead>
         <tr>
+            <th>ID_Empresa</th>
+            <th>Razon_Social</th>
+            <th>RUC</th>
             <th>Correo</th>
-            <th>Razón Social</th>
+            <th>Telefono</th>
 
         </tr>
     </thead>
@@ -18,8 +20,11 @@
         @foreach (Empresa item in listado)
         {
             <tr>
-                <td>@item.Correo</td>
+                <td>@item.ID_Empresa</td>
                 <td>@item.Razon_social</td>
+                <td>@item.RUC</td>
+                <td>@item.Correo</td>
+                <td>@item.Telefono</td>
 
             </tr>
         }
@@ -28,4 +33,4 @@
 </table>
 
 
-
+<a href="" onclick="crear('tabla_empresa')"><img src="~/Foto/ico-excel.png" height="50px" width="50px" /> Exportar</a>

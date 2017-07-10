@@ -1,11 +1,12 @@
 ﻿@using LibraryDA
 @{
-    ViewBag.Title = "ArchivoInvestigacion";
+    ViewBag.Title = "Archivo de Investigacion";
     List<Archivo_Investigacion> listado = (List<Archivo_Investigacion>)ViewBag.ListadoArchivoInvestigacion;
+    List<Proyecto> listadoProyecto = (List<Proyecto>) ViewBag.ListadoProyecto;
 }
 
-<h2>ArchivoInvestigacion</h2>
-<table class="importa_tabla">
+<h2>Archivo Investigacion</h2>
+<table class="importa_tabla" id="tabla_archivo">
     <thead>
         <tr>
             <th>Nombre</th>
@@ -14,6 +15,7 @@
             <th>Fecha Archivo</th>
             <th>Fecha Ini</th>
             <th>Fecha fin</th>
+            <th>Proyecto</th>
 
         </tr>
     </thead>
@@ -29,10 +31,20 @@
                 <td>@item.Fecha_pub_ini</td>
                 <td>@item.Fecha_pub_fin</td>
 
-               
+               @foreach (Proyecto itemCorre in listadoProyecto)
+               {
+                   if (@item.ID_Proyecto == @itemCorre.ID_Proyecto)
+                   {
+                    <td>@itemCorre.Titulo</td>
+                   }
+               }
 
             </tr>
+
         }
 
     </tbody>
 </table>
+
+
+<a href="" onclick="crear('tabla_archivo')"><img src="~/Foto/ico-excel.png" height="50px" width="50px" /> Exportar</a>

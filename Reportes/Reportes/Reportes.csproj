@@ -265,6 +265,9 @@
     <Content Include="Content\cssReportes\theme-white.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Foto\enconstruccion.jpg" />
+    <Content Include="Foto\ico-excel.png" />
+    <Content Include="Foto\user.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
@@ -289,6 +292,8 @@
     <Content Include="Areas\Reportes\Views\Main\Invitado.cshtml" />
     <Content Include="Areas\Reportes\Views\Main\Evento.cshtml" />
     <Content Include="Areas\Reportes\Views\Main\ArchivoInvestigacion.cshtml" />
+    <Content Include="Areas\Reportes\Views\Main\Proyecto.cshtml" />
+    <Content Include="Areas\Reportes\Views\Main\Modulo.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
